@@ -46,8 +46,10 @@ function welcome() {
 
 
 //What is the difference between arguments and parameters?
-
   //Answer Here
+
+  //Arguments are the values passed into parameters.
+  //Parameters are the variables that exist only within the scope of the function declaration.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -59,6 +61,13 @@ function welcome() {
 
   //Answer Here
 
+  //falsy values:  0, "", false, NaN, undefined, null
+  //You check if something is false using the following if statement notation:
+    // if ( (value to check) ) {
+    //  return true;
+    // }
+    // return false;
+
 
 
 //////////////////PROBLEM 6////////////////////
@@ -68,14 +77,19 @@ function welcome() {
 //Create a function called myName that returns your name
 
   //Code Here
-
+function myName() {
+  return "Andrew";
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+var newMyName = myName;
+
 //Now alert the result of invoking newMyName
+alert( newMyName() );
 
 
 
@@ -86,9 +100,16 @@ function welcome() {
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+function outerFn() {
+  return function() {
+    return "Andrew";
+  }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn;
